@@ -6,8 +6,22 @@ import { motion } from 'framer-motion'
 const experiences = [
   {
     company: 'Freelancer',
+    position: 'Web & Mobile Developer',
+    period: 'Jan 2025 - Present',
+    description: 'As a freelancer, I provide professional web and mobile development services, helping clients complete their projects efficiently and effectively. I focus on delivering high-quality results that meet client expectations, with attention to detail and a commitment to timely completion. My work consistently receives positive feedback, reflecting my dedication to client satisfaction and excellence in every project.',
+    achievements: [
+        'Successfully delivered multiple web and mobile projects as a freelancer, meeting client expectations and timelines.',
+        'Maintained a high level of client satisfaction with consistent positive feedback on quality and timely delivery.',
+        'Worked collaboratively with clients to understand their unique needs, ensuring effective solutions tailored to their requirements.',
+        'Gained a strong reputation for reliability and professionalism in delivering well-crafted, user-friendly applications.',
+        'Continuously improved technical skills and project management abilities, ensuring the successful completion of diverse projects.',
+      ],
+    stack: ['ReactJs', 'Flutter','Laravel','Python', 'Flask','C', 'WordPress']
+  },
+  {
+    company: 'Freelancer',
     position: 'Web Developer',
-    period: 'Jan 2024 - Jan 2024',
+    period: 'Jan 2025 - Jan 2025',
     description: ' worked as a freelancer, securing clients through Twitter. The task was to refine the interface using Laravel framework along with CSS styling to enhance the web applications appearance. Given the limited timeframe, I worked from night until morning.',
     achievements: [
         'Successfully refined the web applications interface using Laravel framework along with CSS styling, enhancing the overall user experience.',
@@ -19,31 +33,19 @@ const experiences = [
     stack: ['Laravel', 'Css']
   },
   {
-    company: 'Digital Solutions Ltd.',
-    position: 'Full Stack Developer',
-    period: 'Mar 2018 - Dec 2020',
-    description: 'Developed and maintained various client projects, focusing on responsive design and optimal performance. Collaborated with cross-functional teams to deliver high-quality solutions.',
+    company: 'Freelancer',
+    position: 'Mobile Developer',
+    period: 'Jan 2025 - Jan 2025',
+    description: 'I developed a simple mobile app as a freelancer using Flutter for the frontend and Laravel for the backend. The project focused on delivering smooth functionality and a user-friendly design to meet the clients need.',
     achievements: [
-      'Successfully refined the web applications interface using Laravel framework along with CSS styling, enhancing the overall user experience.',
-      'Secured positive client feedback and testimonials for the improvements made.',
-      'Demonstrated strong problem-solving skills by addressing and fixing multiple bugs efficiently within the given timeframe.',
-      'Received appreciation from the client for delivering the project on time, despite limited working hours.',
-      'Leveraged hands-on experience with Laravel to optimize and streamline web development processes, contributing to a seamless and responsive web application.',
+      'Successfully developed a simple mobile app using Flutter for the frontend and Laravel for the backend.',
+      'Delivered the project on time with smooth functionality and user-friendly design.',
+      'Received positive feedback from the client for quality and professionalism.',
+      'Enhanced my professional portfolio with this achievement.',
     ],
-    stack: ['Vue.js', 'Express', 'PostgreSQL', 'Docker']
+    stack: ['Flutter', 'Laravel', ]
   },
-  {
-    company: 'StartUp Ventures',
-    position: 'Junior Developer',
-    period: 'Jun 2016 - Feb 2018',
-    description: 'Assisted in the development of web applications and gained hands-on experience with various technologies. Participated in code reviews and contributed to improving development processes.',
-    achievements: [
-      'Developed a key feature that attracted 10,000 new users within a month',
-      'Reduced database query times by 60% through optimization',
-      'Contributed to open-source projects, gaining recognition in the developer community'
-    ],
-    stack: ['JavaScript', 'PHP', 'MySQL', 'jQuery']
-  }
+  
 ]
 
 export default function WorkExperience() {

@@ -1,30 +1,45 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import { Menu, X } from 'lucide-react'
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20)
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   return (
-    <header className="bg-white shadow-md fixed w-full z-10">
+    <header className={`fixed w-full z-10 transition-all duration-300 ${
+      scrolled ? 'bg-gray-900/80 backdrop-blur-md' : 'bg-transparent'
+    }`}>
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <Link href="/" className="text-2xl font-bold text-blue-600">YourName</Link>
+        <Link href="/" className="text-2xl font-bold text-gradient">
+          Rezzy.
+        </Link>
         <button
-          className="md:hidden"
+          className="md:hidden text-white hover:text-purple-400 transition duration-300"
           onClick={() => setIsOpen(!isOpen)}
         >
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
+          {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
-        <nav className={`${isOpen ? 'block' : 'hidden'} md:block`}>
-          <ul className="md:flex space-y-2 md:space-y-0 md:space-x-4">
+        <nav className={`${
+          isOpen ? 'block' : 'hidden'
+        } md:block absolute md:relative top-full left-0 right-0 md:top-auto bg-gray-900 md:bg-transparent`}>
+          <ul className="md:flex space-y-2 md:space-y-0 md:space-x-6 p-4 md:p-0">
             {['Home', 'About', 'Skills', 'Projects', 'Certificates', 'Contact'].map((item) => (
               <li key={item}>
                 <Link
                   href={`#${item.toLowerCase()}`}
-                  className="text-gray-600 hover:text-blue-600 transition duration-300"
+                  className="block text-white hover:text-purple-400 transition duration-300 py-2 md:py-0 border-b md:border-b-0 border-gray-700 md:border-transparent"
                   onClick={() => setIsOpen(false)}
                 >
                   {item}
