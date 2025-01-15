@@ -8,6 +8,7 @@ import Skills from './components/Skills'
 import Projects from './components/Projects'
 import Certificates from './components/Certificates'
 import Contact from './components/Contact'
+import Education from './components/Education';
 
 const WorkExperience = dynamic(() => import('./components/WorkExperience'), { ssr: false })
 
@@ -18,6 +19,7 @@ export default function Page() {
       <main>
         <Home />
         <About />
+        <Education/>
         <Skills />
         <WorkExperience />
         <Projects />
