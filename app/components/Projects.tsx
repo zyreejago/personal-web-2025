@@ -57,20 +57,27 @@ export default function Projects() {
   const nextSlide = () => {
     if (currentIndex < maxIndex) {
       setCurrentIndex(currentIndex + 1)
-      controls.start({ x: `${-currentIndex - 1}00%` })
+      controls.start({ x: `${-(currentIndex + 1)}00%` })
     }
   }
 
   const prevSlide = () => {
     if (currentIndex > 0) {
       setCurrentIndex(currentIndex - 1)
-      controls.start({ x: `${-currentIndex + 1}00%` })
+      controls.start({ x: `${-(currentIndex - 1)}00%` })
     }
   }
 
   return (
-    <section id="projects" className="py-20 bg-gradient-to-b from-white to-gray-100">
-      <div className="container mx-auto px-4">
+    <section id="projects" className="py-20 bg-gray-950 text-white relative overflow-hidden">
+      {/* Background elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="stars"></div>
+        <div className="twinkling"></div>
+      </div>
+
+      {/* Content */}
+      <div className="container mx-auto px-4 relative z-10">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-12">Projects</h2>
         <div className="relative overflow-hidden" ref={containerRef}>
           <motion.div
@@ -80,7 +87,7 @@ export default function Projects() {
           >
             {projects.map((project, index) => (
               <div key={index} className="w-full md:w-1/3 flex-shrink-0 px-4">
-                <div className="bg-white rounded-xl overflow-hidden shadow-lg h-full transform transition-all duration-500 hover:shadow-2xl group">
+                <div className="bg-gray-800 rounded-xl overflow-hidden shadow-lg h-full transform transition-all duration-500 hover:shadow-2xl group">
                   <div className="relative h-48 overflow-hidden">
                     <Image
                       src={project.image}
@@ -122,7 +129,7 @@ export default function Projects() {
                         </span>
                       ))}
                     </div>
-                    <p className="text-sm text-gray-600">{project.description}</p>
+                    <p className="text-sm text-gray-300">{project.description}</p>
                   </div>
                 </div>
               </div>
@@ -131,20 +138,19 @@ export default function Projects() {
           <button
             onClick={prevSlide}
             disabled={currentIndex === 0}
-            className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white p-3 rounded-full shadow-md hover:bg-blue-100 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed z-10"
+            className="absolute top-1/2 left-2 transform -translate-y-1/2 bg-gray-800 p-3 rounded-full shadow-md hover:bg-blue-600 hover:shadow-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed z-10"
           >
-            <ChevronLeft className="w-6 h-6" />
+            <ChevronLeft className="w-6 h-6 text-white" />
           </button>
           <button
             onClick={nextSlide}
             disabled={currentIndex === maxIndex}
-            className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white p-3 rounded-full shadow-md hover:bg-blue-100 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed z-10"
+            className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-gray-800 p-3 rounded-full shadow-md hover:bg-blue-600 hover:shadow-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed z-10"
           >
-            <ChevronRight className="w-6 h-6" />
+            <ChevronRight className="w-6 h-6 text-white" />
           </button>
         </div>
       </div>
     </section>
   )
 }
-

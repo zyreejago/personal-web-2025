@@ -52,9 +52,16 @@ export default function WorkExperience() {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null)
 
   return (
-    <section id="experience" className="py-20 bg-gradient-to-b from-white to-gray-100">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Work Experience</h2>
+    <section id="experience" className="py-20 bg-gray-950 text-white relative overflow-hidden">
+      {/* Background elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="stars"></div>
+        <div className="twinkling"></div>
+      </div>
+
+      {/* Content */}
+      <div className="container mx-auto px-4 relative z-10">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gradient animate-pulse-slow">Work Experience</h2>
         <div className="relative">
           {experiences.map((exp, index) => (
             <motion.div
@@ -65,14 +72,14 @@ export default function WorkExperience() {
               transition={{ delay: index * 0.2 }}
             >
               <div className="w-1/4 text-right pr-8">
-                <h3 className="text-xl font-semibold text-gray-800">{exp.company}</h3>
-                <p className="text-sm text-gray-600">{exp.period}</p>
+                <h3 className="text-xl font-semibold text-gray-300">{exp.company}</h3>
+                <p className="text-sm text-gray-400">{exp.period}</p>
               </div>
-              <div className="w-3/4 bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <h4 className="text-lg font-semibold mb-2">{exp.position}</h4>
-                <p className="text-gray-600 mb-4">{exp.description}</p>
+              <div className="w-3/4 bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <h4 className="text-lg font-semibold text-white mb-2">{exp.position}</h4>
+                <p className="text-gray-300 mb-4">{exp.description}</p>
                 <button
-                  className="text-blue-600 hover:text-blue-800 transition-colors duration-300 mb-2"
+                  className="text-purple-400 hover:text-purple-600 transition-colors duration-300 mb-2"
                   onClick={() => setExpandedIndex(expandedIndex === index ? null : index)}
                 >
                   {expandedIndex === index ? 'Hide Details' : 'Show Details'}
@@ -84,10 +91,10 @@ export default function WorkExperience() {
                     exit={{ opacity: 0, height: 0 }}
                     transition={{ duration: 0.3 }}
                   >
-                    <h5 className="font-semibold mt-2 mb-1">Key Achievements:</h5>
-                    <ul className="list-disc list-inside mb-4">
+                    <h5 className="font-semibold text-purple-300 mt-2 mb-1">Key Achievements:</h5>
+                    <ul className="list-disc list-inside mb-4 text-gray-300">
                       {exp.achievements.map((achievement, i) => (
-                        <li key={i} className="text-sm text-gray-700">{achievement}</li>
+                        <li key={i} className="text-sm">{achievement}</li>
                       ))}
                     </ul>
                     <div className="flex flex-wrap gap-2">
@@ -102,7 +109,6 @@ export default function WorkExperience() {
               </div>
             </motion.div>
           ))}
-          <div className="absolute left-1/4 top-0 bottom-0 w-px bg-gray-300 transform -translate-x-1/2"></div>
         </div>
       </div>
     </section>
