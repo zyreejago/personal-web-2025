@@ -7,35 +7,71 @@ import { ChevronLeft, ChevronRight } from 'lucide-react'
 
 const certificates = [
   {
-    name: 'Web Development Bootcamp',
-    issuer: 'Udemy',
-    date: 'January 2023',
+    name: 'ReactJS Basics',
+    issuer: 'CODEPOLITAN',
+    date: 'January 2025',
     image: '/placeholder.svg'
   },
   {
-    name: 'React Nanodegree',
-    issuer: 'Udacity',
-    date: 'June 2022',
+    name: 'Creating and utilizing components in a ReactJS-based application',
+    issuer: 'CODEPOLITAN',
+    date: 'January 2025',
     image: '/placeholder.svg'
   },
   {
-    name: 'AWS Certified Developer',
-    issuer: 'Amazon Web Services',
-    date: 'December 2021',
+    name: 'Managing view changes with data and event handlers in a ReactJS-based application',
+    issuer: 'CODEPOLITAN',
+    date: 'January 2025',
     image: '/placeholder.svg'
   },
   {
-    name: 'Machine Learning Specialization',
-    issuer: 'Coursera',
-    date: 'August 2022',
+    name: 'JavaScript Programming Basics',
+    issuer: 'Dicoding Indoneisa',
+    date: 'Des 2024',
     image: '/placeholder.svg'
   },
   {
-    name: 'Cybersecurity Fundamentals',
-    issuer: 'edX',
-    date: 'March 2023',
+    name: 'Cloud Practitioner Essentials (AWS Cloud Basics)',
+    issuer: 'Dicodig Indonesia',
+    date: 'Des 2024',
     image: '/placeholder.svg'
-  }
+  },
+  {
+    name: 'AJAX and Web API Basics',
+    issuer: 'CODEPOLITAN',
+    date: 'Des 2024',
+    image: '/placeholder.svg'
+  },{
+    name: 'Build Your Own Online Store With WordPress',
+    issuer: 'CODEPOLITAN',
+    date: 'Des 2024',
+    image: '/placeholder.svg'
+  },{
+    name: 'Introduction to Computer Programming',
+    issuer: 'CODEPOLITAN',
+    date: 'Des 2024',
+    image: '/placeholder.svg'
+  },{
+    name: '1st Place in Mathematics Olympiad at the district level',
+    issuer: 'Primagama',
+    date: 'Des 2018',
+    image: '/placeholder.svg'
+  },{
+    name: 'National Mathematics Olympiad Participant Certificate',
+    issuer: 'Primagama',
+    date: 'Jan 2019',
+    image: '/placeholder.svg'
+  },  {
+    name: '2nd Place in Mathematics Olympiad at the district level.',
+    issuer: 'Kompetisi Sains Nasional',
+    date: 'Apr 2018',
+    image: '/placeholder.svg'
+  },  {
+    name: '2nd Place in Mathematics Olympiad Training.',
+    issuer: 'Kompetisi Sains Nasional',
+    date: 'Apr 2018',
+    image: '/placeholder.svg'
+  },   
 ]
 
 export default function Certificates() {

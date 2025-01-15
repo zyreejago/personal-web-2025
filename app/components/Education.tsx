@@ -17,11 +17,11 @@ type Education = {
 
 const educationData: Education[] = [
   {
-    level: "S1 Teknik Informatika",
+    level: "Bachelor's Degree in Informatics Engineering",
     institution: "Universitas Pendidikan Ganesha",
-    location: "Kota Singaraja, Indonesia",
-    period: "2022 - Sekarang",
-    description: "Sedang menempuh pendidikan S1 Teknik Informatika dengan fokus pada pengembangan perangkat lunak, kecerdasan buatan, dan struktur data.",
+    location: "Singaraja, Indonesia",
+    period: "2022 - Present",
+    description: "In college, I have been learning a lot about programming, which sparked my interest in diving deeper into this field. As a result, I have been studying web and mobile development, which has led me to work as a freelancer, as I am doing now.",
     subjects: [
       { name: "Algoritma dan Struktur Data", icon: Code },
       { name: "Pemrograman Berorientasi Objek", icon: Code },
@@ -34,32 +34,32 @@ const educationData: Education[] = [
     progress: 75
   },
   {
-    level: "SMA",
+    level: "Senior High School.",
     institution: "MAN 3 Jembrana",
-    location: "Kota Jembrana, Indonesia",
+    location: "Jembrana, Indonesia",
     period: "2019 - 2022",
-    description: "Menyelesaikan pendidikan menengah atas dengan fokus pada ilmu alam dan teknologi informasi.",
+    description: "In high school, I achieved first place in a national online Mathematics Olympiad, third place in the most prestigious district-level Mathematics Olympiad event, and third place in a math competition among Islamic schools in the district.",
     subjects: [
       { name: "Matematika", icon: Calculator },
       { name: "Fisika", icon: Flask },
       { name: "Kimia", icon: Flask },
       { name: "Biologi", icon: Dna },
       { name: "Bahasa Inggris", icon: Globe },
-      { name: "Teknologi Informasi dan Komunikasi", icon: Cpu }
+       
     ]
   },
   {
-    level: "SMP",
+    level: "Junior High School",
     institution: "MTS Ma'arif",
-    location: "Kota Karangasem, Indonesia",
+    location: "Karangasem, Indonesia",
     period: "2016 - 2019",
-    description: "Menyelesaikan pendidikan menengah pertama dengan pengenalan dasar ilmu komputer.",
+    description: "In junior high school, I won second place in the district Mathematics Olympiad and the training program, earning the chance to compete at the provincial level. Although I didn't win provincially, it was a valuable experience.",
     subjects: [
       { name: "Matematika", icon: Calculator },
       { name: "IPA", icon: Flask },
       { name: "Bahasa Indonesia", icon: Globe },
       { name: "Bahasa Inggris", icon: Globe },
-      { name: "Pengenalan Komputer Dasar", icon: Cpu }
+    
     ]
   }
 ]
@@ -149,7 +149,7 @@ export default function Education() {
                     <div className="px-6 pb-6">
                       <p className="text-gray-300 text-sm mb-4">{edu.description}</p>
                       <h4 className="font-semibold text-base text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600 mb-2">
-                        {edu.ongoing ? "Sedang Mempelajari:" : "Mata Pelajaran Utama:"}
+                        {edu.ongoing ? "Currently Learning:" : "Already Learned:"}
                       </h4>
                       <div className="grid grid-cols-1 gap-2">
                         {edu.subjects?.map((subject, i) => (

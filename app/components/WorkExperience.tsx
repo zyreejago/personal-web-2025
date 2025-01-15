@@ -43,10 +43,23 @@ const workExperiences: WorkExperience[] = [
   },
   {
     type: 'work',
+    company: 'fyisite.id',
+    position: 'Intern - Curriculum Developer',
+    period: 'Jan 2025 - Feb 2025',
+    description: 'During my internship as a Curriculum Developer, I was tasked with designing and organizing full-stack development materials using the ReactJS framework. I was given a one-month period to complete this task, where I focused on developing comprehensive and user-friendly content for web. My role required thorough research, clear structuring of topics, and creating practical examples to enhance the learning experience for trainees. The experience allowed me to hone my technical skills and improve my ability to create structured educational content in a limited timeframe.',
+    achievements: [
+      'Obtaining a Certification.',
+      'Receiving a Letter of Recommendation from a senior developer, highlighting my ability to manage complex projects effectively.',
+      'Gaining strong recommendations on LinkedIn and building valuable connections with influential industry professionals.',
+    ],
+    stack: ['ReactJs', 'Vercel']
+  },
+  {
+    type: 'work',
     company: 'Freelancer',
     position: 'Web Developer',
     period: 'Jan 2025 - Jan 2025',
-    description: 'I worked as a freelancer, securing clients through Twitter. The task was to refine the interface using Laravel framework along with CSS styling to enhance the web applications appearance. Given the limited timeframe, I worked from night until morning.',
+    description: 'I worked as a freelancer. The task was to refine the interface using Laravel framework along with CSS styling to enhance the web applications appearance. Given the limited timeframe, I worked from night until morning.',
     achievements: [
       'Successfully refined the web applications interface using Laravel framework along with CSS styling, enhancing the overall user experience.',
       'Secured positive client feedback and testimonials for the improvements made.',
@@ -56,20 +69,7 @@ const workExperiences: WorkExperience[] = [
     ],
     stack: ['Laravel', 'CSS']
   },
-  {
-    type: 'work',
-    company: 'Freelancer',
-    position: 'Mobile Developer',
-    period: 'Jan 2025 - Jan 2025',
-    description: 'I developed a simple mobile app as a freelancer using Flutter for the frontend and Laravel for the backend. The project focused on delivering smooth functionality and a user-friendly design to meet the clients need.',
-    achievements: [
-      'Successfully developed a simple mobile app using Flutter for the frontend and Laravel for the backend.',
-      'Delivered the project on time with smooth functionality and user-friendly design.',
-      'Received positive feedback from the client for quality and professionalism.',
-      'Enhanced my professional portfolio with this achievement.',
-    ],
-    stack: ['Flutter', 'Laravel']
-  },
+ 
 ]
 
 const organizationExperiences: OrganizationExperience[] = [
@@ -77,43 +77,40 @@ const organizationExperiences: OrganizationExperience[] = [
     type: 'organization',
     organization: 'INTEGER #6',
     position: 'Event Coordinator Mobile Legends',
-    period: 'Mar 2025 - Jun 2025',
-    description: 'Coordinated a major tech conference, managing logistics, speaker arrangements, and attendee experience.',
+    period: 'Agust 2024 - Nov 2024',
+    description: 'As the coordinator for the Mobile Legends event at Integer #6, my responsibilities include scheduling with team members, developing a guidebook, managing stage setups, and ensuring smooth event execution for 32 participants from high schools and universities in Bali.',
     achievements: [
-      'Successfully organized a conference for over 500 attendees, receiving 95% positive feedback.',
-      'Managed a team of 20 volunteers, ensuring smooth operation across all conference areas.',
-      'Secured sponsorships from 10 major tech companies, increasing the event budget by 30%.',
-      'Implemented an innovative mobile app for real-time schedule updates and networking, enhancing attendee engagement.',
+      'Displaying strong leadership by guiding the team effectively to work collaboratively.',
+      'Collaborating in teamwork to ensure a smooth event by coordinating well among committee members.',
+      'Supporting the successful execution of the event with structured and professional organization.',
+
     ],
-    skills: ['Event Management', 'Team Leadership', 'Sponsorship Acquisition', 'Mobile App Implementation']
+    skills: ['Event Management', 'Team Leadership']
   },
   {
     type: 'organization',
     organization: 'INTEGER #5',
     position: 'Event Coordinator PUBG Mobile',
-    period: 'Sep 2024 - Nov 2024',
-    description: 'Led the technical aspects of a university-wide hackathon, focusing on emerging technologies.',
+    period: 'Sep 2023 - Oct 2023',
+    description: 'As the coordinator for the PUBG Mobile event at Integer #5, my responsibilities include scheduling with team members, creating a guidebook, managing stage mockups, and facilitating the event exclusively for TI Undiksha students to nurture their gaming talents.',
     achievements: [
-      'Designed and implemented the hackathon\'s technical infrastructure, supporting over 200 participants.',
-      'Created comprehensive documentation and conducted workshops to assist participants with various technologies.',
-      'Collaborated with industry partners to provide cutting-edge tools and platforms for the event.',
-      'Mentored 5 winning teams, helping them refine their projects for real-world application.',
+      'Displaying strong leadership by guiding the team effectively to work collaboratively.',
+      'Collaborating in teamwork to ensure a smooth event by coordinating well among committee members.',
+      'Supporting the successful execution of the event with structured and professional organization.',
     ],
-    skills: ['Technical Leadership', 'Workshop Facilitation', 'Mentoring', 'Emerging Tech']
+    skills: ['Team Leadership', 'Event Management']
   },
   {
     type: 'organization',
     organization: 'INTEGER #5',
     position: 'Logistic',
-    period: 'Jan 2024 - Dec 2024',
-    description: 'Managed a year-long initiative to develop open-source solutions for local non-profit organizations.',
+    period: 'Oct 2023 - Dec 2023',
+    description: 'As a logistics member for the Music Event at Integer #5, my role involves assisting in managing and displaying the artist requirements, ensuring smooth execution of logistical operations for the event.',
     achievements: [
-      'Led a team of 15 volunteer developers to complete 5 impactful projects for community organizations.',
-      'Implemented agile methodologies, resulting in a 40% increase in project completion efficiency.',
-      'Organized monthly code review sessions, enhancing code quality and knowledge sharing among team members.',
-      'Established partnerships with 3 local tech companies for ongoing support and resources.',
+      'Coordinating with the logistics team to ensure the provision of required equipment and resources according to the schedule.',
+      'Managing and monitoring logistics workflows to support the overall smooth execution of the event.',
     ],
-    skills: ['Project Management', 'Agile Methodologies', 'Open Source Development', 'Community Outreach']
+    skills: ['Responsibility', 'Time Management']
   },
 ]
 

@@ -7,45 +7,75 @@ import { Github, ExternalLink, ChevronLeft, ChevronRight } from 'lucide-react'
 
 const projects = [
   {
-    name: 'Project 1',
-    description: 'A brief description of Project 1 and its features. This project showcases the use of modern web technologies to solve real-world problems.',
+    name: 'Detection Hoax Using Web Semantic',
+    description: 'Detection Hoax Using Web Semantic is a project developed using Python for web scraping from detik.com and CNN Indonesia. The backend is built using GraphDB to manage and analyze data. In this project, I collaborated with a team of 3 members, including myself, to ensure the successful implementation and functionality of the system.',
     image: '/placeholder.svg',
-    stack: ['React', 'Node.js', 'MongoDB'],
+    stack: ['Python', 'Flask', 'Scrapping Web'],
     github: 'https://github.com/yourusername/project1',
     live: 'https://project1.com'
   },
   {
-    name: 'Project 2',
-    description: 'An overview of Project 2 and what it accomplishes. This application demonstrates advanced state management and API integration.',
+    name: 'Cokedex',
+    description: 'Cokedex is a Flutter application developed with a Laravel backend. The application allows users to search for food recipes, post new recipes, and interact with an AI bot powered by Gemini, which is free and limited to providing information solely about food. In this project, I collaborated with a team of 5 members, including myself, to ensure the successful development and functionality of the application.',
     image: '/placeholder.svg',
-    stack: ['Next.js', 'TypeScript', 'GraphQL'],
+    stack: ['Flutter', 'Laravel'],
     github: 'https://github.com/yourusername/project2',
     live: 'https://project2.com'
   },
   {
-    name: 'Project 3',
-    description: 'Details about Project 3 and its unique aspects. This project focuses on creating a seamless user experience with cutting-edge frontend technologies.',
+    name: 'GoCheck',
+    description: 'GoCheck is a web application similar to a simple to-do list where users can add or delete notes they have written. The website is built using ReactJS, ensuring a smooth and user-friendly experience.',
     image: '/placeholder.svg',
-    stack: ['Vue.js', 'Express', 'PostgreSQL'],
+    stack: ['ReactJS'],
+    github: 'https://github.com/yourusername/project5',
+    live: 'https://project5.com'
+  },
+  {
+    name: 'Project from CODEPOLITAN',
+    description: 'The project involves creating a simple blog application with pages for Home, Articles, and Blog. The articles are fetched from JSONPlaceholder API, and the frontend is developed using ReactJS.',
+    image: '/placeholder.svg',
+    stack: ['React.JS'],
     github: 'https://github.com/yourusername/project3',
     live: 'https://project3.com'
   },
   {
-    name: 'Project 4',
-    description: 'A summary of Project 4 and its key features. This mobile application showcases cross-platform development and real-time data synchronization.',
+    name: 'MyBuilder',
+    description: 'MyBuilder is a web application built with a PHP frontend and a MySQL backend. This platform is designed for people who have difficulty finding craftsmen, allowing them to order services online. In this project, I collaborated with a team of 3 members, including myself, with the role of team leader',
     image: '/placeholder.svg',
-    stack: ['React Native', 'Firebase', 'Redux'],
+    stack: ['PHP', 'MySql'],
     github: 'https://github.com/yourusername/project4',
     live: 'https://project4.com'
   },
   {
-    name: 'Project 5',
-    description: 'An explanation of Project 5 and its main objectives. This project demonstrates the power of server-side rendering and microservices architecture.',
+    name: 'apepe premium',
+    description: 'apepe premium is a website built using WordPress, utilizing the Elementor plugin and eCommerce features. This simple eCommerce site allows users to order premium applications directly through the website.',
     image: '/placeholder.svg',
-    stack: ['Angular', 'NestJS', 'MySQL'],
+    stack: ['WordPress', 'MySQL'],
     github: 'https://github.com/yourusername/project5',
     live: 'https://project5.com'
-  }
+  },{
+    name: 'Project from CODEPOLITAN',
+    description: 'Project from Codepolitan involves creating a website that fetches data from TVMaze API. The website will display popular TV shows or movies, providing users with a simple and interactive platform to explore content.',
+    image: '/placeholder.svg',
+    stack: ['JavaScript'],
+    github: 'https://github.com/yourusername/project5',
+    live: 'https://project5.com'
+  },{
+    name: 'Project from CODEPOLITAN',
+    description: 'Project from Codepolitan involves creating a website that fetches jokes using the Jokes Retrieval API. When users click a button on the website, a random joke is displayed, providing a fun and interactive experience.  ',
+    image: '/placeholder.svg',
+    stack: ['JavaScript'],
+    github: 'https://github.com/yourusername/project5',
+    live: 'https://project5.com'
+  },
+  {
+    name: 'Project from Clients',
+    description: 'Project from clients involves creating custom web or mobile solutions tailored to the specific needs and requirements of each client. Due to confidentiality agreements, I am unable to provide specific details about these projects to maintain client privacy. ',
+    image: '/placeholder.svg',
+    stack: ['Laravel','Flutter','ReactJS','WordPress',],
+    github: 'https://github.com/yourusername/project5',
+    live: 'https://project5.com'
+  },
 ]
 
 export default function Projects() {
