@@ -1,95 +1,106 @@
-'use client'
-
-import { useState } from 'react'
-import Image from 'next/image'
-import { motion } from 'framer-motion'
-import { ChevronLeft, ChevronRight } from 'lucide-react'
+import { useState } from 'react';
+import Image from 'next/image';
+import { motion } from 'framer-motion';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const certificates = [
   {
     name: 'ReactJS Basics',
     issuer: 'CODEPOLITAN',
     date: 'January 2025',
-    image: '/placeholder.svg'
+    image: '/assets/images/reactjs_fundamental.png',
   },
   {
     name: 'Creating and utilizing components in a ReactJS-based application',
     issuer: 'CODEPOLITAN',
     date: 'January 2025',
-    image: '/placeholder.svg'
+    image: '/assets/images/reactjs_create.png',
   },
   {
     name: 'Managing view changes with data and event handlers in a ReactJS-based application',
     issuer: 'CODEPOLITAN',
     date: 'January 2025',
-    image: '/placeholder.svg'
+    image: '/placeholder.svg',
   },
   {
     name: 'JavaScript Programming Basics',
     issuer: 'Dicoding Indoneisa',
     date: 'Des 2024',
-    image: '/placeholder.svg'
+    image: '/placeholder.svg',
   },
   {
     name: 'Cloud Practitioner Essentials (AWS Cloud Basics)',
-    issuer: 'Dicodig Indonesia',
+    issuer: 'Dicoding Indonesia',
     date: 'Des 2024',
-    image: '/placeholder.svg'
+    image: '/placeholder.svg',
   },
   {
     name: 'AJAX and Web API Basics',
     issuer: 'CODEPOLITAN',
     date: 'Des 2024',
-    image: '/placeholder.svg'
-  },{
+    image: '/placeholder.svg',
+  },
+  {
     name: 'Build Your Own Online Store With WordPress',
     issuer: 'CODEPOLITAN',
     date: 'Des 2024',
-    image: '/placeholder.svg'
-  },{
+    image: '/placeholder.svg',
+  },
+  {
     name: 'Introduction to Computer Programming',
     issuer: 'CODEPOLITAN',
     date: 'Des 2024',
-    image: '/placeholder.svg'
-  },{
+    image: '/placeholder.svg',
+  },
+  {
     name: '1st Place in Mathematics Olympiad at the district level',
     issuer: 'Primagama',
     date: 'Des 2018',
-    image: '/placeholder.svg'
-  },{
+    image: '/placeholder.svg',
+  },
+  {
     name: 'National Mathematics Olympiad Participant Certificate',
     issuer: 'Primagama',
     date: 'Jan 2019',
-    image: '/placeholder.svg'
-  },  {
+    image: '/placeholder.svg',
+  },
+  {
     name: '2nd Place in Mathematics Olympiad at the district level.',
     issuer: 'Kompetisi Sains Nasional',
     date: 'Apr 2018',
-    image: '/placeholder.svg'
-  },  {
+    image: '/placeholder.svg',
+  },
+  {
     name: '2nd Place in Mathematics Olympiad Training.',
     issuer: 'Kompetisi Sains Nasional',
     date: 'Apr 2018',
-    image: '/placeholder.svg'
-  },   
-]
+    image: '/placeholder.svg',
+  },
+];
 
 export default function Certificates() {
-  const [currentIndex, setCurrentIndex] = useState(0)
-  const maxIndex = certificates.length - 3
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const maxIndex = certificates.length - 3;
 
   const nextSlide = () => {
-    setCurrentIndex((prevIndex) => Math.min(prevIndex + 1, maxIndex))
-  }
+    setCurrentIndex((prevIndex) => Math.min(prevIndex + 1, maxIndex));
+  };
 
   const prevSlide = () => {
-    setCurrentIndex((prevIndex) => Math.max(prevIndex - 1, 0))
-  }
+    setCurrentIndex((prevIndex) => Math.max(prevIndex - 1, 0));
+  };
 
   return (
-    <section id="certificates" className="py-20 bg-gradient-to-b from-gray-100 to-white">
-      <div className="container mx-auto px-4">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-12">Certificates</h2>
+    <section id="certificates" className="py-20 bg-gray-950 text-white relative overflow-hidden">
+      {/* Background elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="stars"></div>
+        <div className="twinkling"></div>
+      </div>
+
+      {/* Content */}
+      <div className="container mx-auto px-4 relative z-10">
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-gradient animate-pulse-slow">Certificates</h2>
         <div className="relative">
           <div className="overflow-hidden">
             <motion.div
@@ -141,6 +152,5 @@ export default function Certificates() {
         </div>
       </div>
     </section>
-  )
+  );
 }
-

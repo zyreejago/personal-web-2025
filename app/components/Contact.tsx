@@ -1,34 +1,38 @@
-'use client'
-
-import { useState } from 'react'
+import { useState } from 'react';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     message: ''
-  })
+  });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target
-    setFormData(prevState => ({ ...prevState, [name]: value }))
-  }
+    const { name, value } = e.target;
+    setFormData(prevState => ({ ...prevState, [name]: value }));
+  };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
+    e.preventDefault();
     // Here you would typically send the form data to your backend
-    console.log('Form submitted:', formData)
+    console.log('Form submitted:', formData);
     // Reset form after submission
-    setFormData({ name: '', email: '', message: '' })
-  }
+    setFormData({ name: '', email: '', message: '' });
+  };
 
   return (
-    <section id="contact" className="py-20 bg-white">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">Contact Me</h2>
+    <section id="contact" className="py-20 bg-gray-950 text-white relative overflow-hidden">
+      {/* Background elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="stars"></div>
+        <div className="twinkling"></div>
+      </div>
+
+      <div className="container mx-auto px-4 relative z-10">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 text-gradient animate-pulse-slow">Contact Me</h2>
         <form onSubmit={handleSubmit} className="max-w-lg mx-auto">
           <div className="mb-4">
-            <label htmlFor="name" className="block text-gray-700 font-bold mb-2">Name</label>
+            <label htmlFor="name" className="block text-gray-300 font-bold mb-2">Name</label>
             <input
               type="text"
               id="name"
@@ -40,7 +44,7 @@ export default function Contact() {
             />
           </div>
           <div className="mb-4">
-            <label htmlFor="email" className="block text-gray-700 font-bold mb-2">Email</label>
+            <label htmlFor="email" className="block text-gray-300 font-bold mb-2">Email</label>
             <input
               type="email"
               id="email"
@@ -52,7 +56,7 @@ export default function Contact() {
             />
           </div>
           <div className="mb-4">
-            <label htmlFor="message" className="block text-gray-700 font-bold mb-2">Message</label>
+            <label htmlFor="message" className="block text-gray-300 font-bold mb-2">Message</label>
             <textarea
               id="message"
               name="message"
@@ -74,6 +78,5 @@ export default function Contact() {
         </form>
       </div>
     </section>
-  )
+  );
 }
-

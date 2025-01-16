@@ -38,9 +38,9 @@ export default function Home() {
       <div className="container mx-auto px-4 py-12 flex flex-col md:flex-row items-center justify-between relative z-10">
         <div className="md:w-1/2 md:pl-12 mb-8 md:mb-0">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-purple-300 animate-pulse">
-            Web Developer
+            Web and Mobile Developer
           </h2>
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-gradient">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
             I am Mohammad Rezzy Alzamzammi
           </h1>
           <div className="flex flex-col sm:flex-row justify-start space-y-4 sm:space-y-0 sm:space-x-4">

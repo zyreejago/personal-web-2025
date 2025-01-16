@@ -34,7 +34,7 @@ const educationData: Education[] = [
     progress: 75
   },
   {
-    level: "Senior High School.",
+    level: "Senior High School",
     institution: "MAN 3 Jembrana",
     location: "Jembrana, Indonesia",
     period: "2019 - 2022",
@@ -104,7 +104,7 @@ export default function Education() {
                 onClick={() => toggleExpand(index)}
               >
                 <div className="flex justify-between items-center">
-                  <h3 className="text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">{edu.level}</h3>
+                  <h3 className="text-xl font-semibold text-white bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">{edu.level}</h3>
                   <motion.div
                     animate={{ rotate: expandedIndex === index ? 180 : 0 }}
                     transition={{ duration: 0.3 }}
