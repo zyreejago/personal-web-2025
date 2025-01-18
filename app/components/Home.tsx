@@ -1,20 +1,22 @@
-'use client'
+"use client";
 
-import Image from 'next/image'
-import Link from 'next/link'
-import { useEffect, useState, useCallback } from 'react'
+import Image from "next/image";
+import Link from "next/link";
+import { useEffect, useState, useCallback } from "react";
+import { useTypingEffect } from "../hooks/useTypingEffect";
 
 export default function Home() {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const typedText = useTypingEffect("Web and Mobile Developer", 100);
 
   const handleMouseMove = useCallback((e: MouseEvent) => {
-    setMousePosition({ x: e.clientX, y: e.clientY })
-  }, [])
+    setMousePosition({ x: e.clientX, y: e.clientY });
+  }, []);
 
   useEffect(() => {
-    window.addEventListener('mousemove', handleMouseMove)
-    return () => window.removeEventListener('mousemove', handleMouseMove)
-  }, [handleMouseMove])
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
+  }, [handleMouseMove]);
 
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gray-950 text-white">
@@ -26,7 +28,7 @@ export default function Home() {
       <div className="absolute inset-0 overflow-hidden">
         <div className="stars"></div>
         <div className="twinkling"></div>
-        <div 
+        <div
           className="cosmic-burst"
           style={{
             background: `radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(76, 29, 149, 0.1) 0%, rgba(30, 58, 138, 0.1) 25%, transparent 50%)`,
@@ -37,8 +39,8 @@ export default function Home() {
       {/* Content */}
       <div className="container mx-auto px-4 py-12 flex flex-col md:flex-row items-center justify-between relative z-10">
         <div className="md:w-1/2 md:pl-12 mb-8 md:mb-0">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-purple-300 animate-pulse">
-            Web and Mobile Developer
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-purple-300 typing-container">
+            <span className="typing-text">{typedText}</span>
           </h2>
           <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
             I am Mohammad Rezzy Alzamzammi
@@ -46,7 +48,7 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row justify-start space-y-4 sm:space-y-0 sm:space-x-4">
             <Link
               href="#contact"
-              className="bg-gradient-to-r from-purple-500 to-indigo-600 text-white px-8 py-4 rounded-full font-bold transition duration-300 transform hover:scale-105 hover:from-purple-600 hover:to-indigo-700 shadow-neon-purple hover:shadow-neon-purple-intense"
+              className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full font-bold transition-all duration-500 transform hover:scale-110 hover:bg-gradient-to-r hover:from-purple-500 hover:to-blue-500 shadow-lg hover:shadow-xl"
             >
               Hire Me
             </Link>
@@ -73,6 +75,5 @@ export default function Home() {
         </div>
       </div>
     </section>
-  )
+  );
 }
-
