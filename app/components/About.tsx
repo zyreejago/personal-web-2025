@@ -1,12 +1,28 @@
 import { Github, Linkedin, Instagram } from 'lucide-react'
+import { useState,useCallback,useEffect } from 'react';
 
 export default function About() {
+    const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const handleMouseMove = useCallback((e: MouseEvent) => {
+      setMousePosition({ x: e.clientX, y: e.clientY });
+    }, []);
+  
+    useEffect(() => {
+      window.addEventListener("mousemove", handleMouseMove);
+      return () => window.removeEventListener("mousemove", handleMouseMove);
+    }, [handleMouseMove]);
   return (
     <section id="about" className="py-20 bg-gray-950 text-white relative overflow-hidden">
       {/* Background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="stars"></div>
         <div className="twinkling"></div>
+        <div
+          className="cosmic-burst"
+          style={{
+            background: `radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(76, 29, 149, 0.1) 0%, rgba(30, 58, 138, 0.1) 25%, transparent 50%)`,
+          }}
+        ></div>
       </div>
       
       {/* Content */}

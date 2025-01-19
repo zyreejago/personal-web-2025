@@ -1,33 +1,36 @@
-'use client'
+"use client";
 
-import { useState, useRef } from 'react'
-import Image from 'next/image'
-import { motion, useAnimation } from 'framer-motion'
-import { Github, ExternalLink, ChevronLeft, ChevronRight } from 'lucide-react'
-import { projects } from '../data/projects'
+import { useState, useRef } from "react";
+import Image from "next/image";
+import { motion, useAnimation } from "framer-motion";
+import { Github, ExternalLink, ChevronLeft, ChevronRight } from "lucide-react";
+import { projects } from "../data/projects";
 
 export default function Projects() {
-  const [currentIndex, setCurrentIndex] = useState(0)
-  const maxIndex = projects.length - 3
-  const controls = useAnimation()
-  const containerRef = useRef<HTMLDivElement>(null)
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const maxIndex = projects.length - 3;
+  const controls = useAnimation();
+  const containerRef = useRef<HTMLDivElement>(null);
 
   const nextSlide = () => {
     if (currentIndex < maxIndex) {
-      setCurrentIndex(currentIndex + 1)
-      controls.start({ x: `${-(currentIndex + 1)}00%` })
+      setCurrentIndex(currentIndex + 1);
+      controls.start({ x: `${-(currentIndex + 1)}00%` });
     }
-  }
+  };
 
   const prevSlide = () => {
     if (currentIndex > 0) {
-      setCurrentIndex(currentIndex - 1)
-      controls.start({ x: `${-(currentIndex - 1)}00%` })
+      setCurrentIndex(currentIndex - 1);
+      controls.start({ x: `${-(currentIndex - 1)}00%` });
     }
-  }
+  };
 
   return (
-    <section id="projects" className="py-20 bg-gray-950 text-white relative overflow-hidden">
+    <section
+      id="projects"
+      className="py-20 bg-gray-950 text-white relative overflow-hidden"
+    >
       {/* Background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="stars"></div>
@@ -36,28 +39,30 @@ export default function Projects() {
 
       {/* Content */}
       <div className="container mx-auto px-4 relative z-10">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-12">Projects</h2>
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-12">
+          Projects
+        </h2>
         <div className="relative overflow-hidden" ref={containerRef}>
           <motion.div
             className="flex"
             animate={controls}
-            transition={{ type: 'spring', stiffness: 300, damping: 30 }}
+            transition={{ type: "spring", stiffness: 300, damping: 30 }}
           >
             {projects.map((project, index) => (
               <div key={index} className="w-full md:w-1/3 flex-shrink-0 px-4">
                 <motion.div
                   className="bg-gray-800 rounded-xl overflow-hidden shadow-lg h-full transform transition-all duration-500 hover:shadow-2xl group"
-                  whileHover={{ 
-                    scale: 1.05, 
-                    borderRadius: "1rem" 
+                  whileHover={{
+                    scale: 1.05,
+                    borderRadius: "1rem",
                   }}
-                  transition={{ 
-                    type: 'spring', 
-                    stiffness: 400, 
+                  transition={{
+                    type: "spring",
+                    stiffness: 400,
                     damping: 10,
-                    borderRadius: { 
-                      duration: 0.1 
-                    }
+                    borderRadius: {
+                      duration: 0.1,
+                    },
                   }}
                 >
                   <div className="relative h-48 overflow-hidden group-hover:rounded-t-xl transition-all duration-300">
@@ -102,20 +107,32 @@ export default function Projects() {
                     </motion.div>
                   </div>
                   <div className="p-6 group-hover:rounded-b-xl transition-all duration-300">
-                    <h3 className="text-xl font-semibold mb-2 group-hover:text-blue-600 transition-colors duration-300">{project.name}</h3>
+                    <h3 className="text-xl font-semibold mb-2 group-hover:text-blue-600 transition-colors duration-300">
+                      {project.name}
+                    </h3>
                     <div className="flex flex-wrap gap-2 mb-4">
                       {project.stack.map((tech, i) => (
                         <motion.span
                           key={i}
                           className="bg-blue-100 text-blue-800 text-xs font-semibold px-2 py-1 rounded-full"
-                          whileHover={{ scale: 1.1, backgroundColor: '#90cdf4', color: '#2c5282' }}
-                          transition={{ type: 'spring', stiffness: 400, damping: 10 }}
+                          whileHover={{
+                            scale: 1.1,
+                            backgroundColor: "#90cdf4",
+                            color: "#2c5282",
+                          }}
+                          transition={{
+                            type: "spring",
+                            stiffness: 400,
+                            damping: 10,
+                          }}
                         >
                           {tech}
                         </motion.span>
                       ))}
                     </div>
-                    <p className="text-sm text-gray-300">{project.description}</p>
+                    <p className="text-sm text-gray-300">
+                      {project.description}
+                    </p>
                   </div>
                 </motion.div>
               </div>
@@ -142,6 +159,5 @@ export default function Projects() {
         </div>
       </div>
     </section>
-  )
+  );
 }
-
