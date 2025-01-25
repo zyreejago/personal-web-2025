@@ -2,15 +2,15 @@ export const projects = [
     {
       name: 'Detection Hoax Using Web Semantic',
       description: 'Detection Hoax Using Web Semantic is a project developed using Python for web scraping from detik.com and CNN Indonesia. The backend is built using GraphDB to manage and analyze data. In this project, I collaborated with a team of 3 members, including myself, to ensure the successful implementation and functionality of the system.',
-      image: '/placeholder.svg?height=300&width=400',
+      image: '/assets/images/detection-hoa.jpg',
       stack: ['Python', 'Flask', 'Scrapping Web'],
-      github: 'https://github.com/yourusername/project1',
+      github: '/assets/images/detection-hoa.jpg',
       live: 'https://project1.com'
     },
     {
       name: 'Cokedex',
       description: 'Cokedex is a Flutter application developed with a Laravel backend. The application allows users to search for food recipes, post new recipes, and interact with an AI bot powered by Gemini, which is free and limited to providing information solely about food. In this project, I collaborated with a team of 5 members, including myself, to ensure the successful development and functionality of the application.',
-      image: '/placeholder.svg?height=300&width=400',
+      image: '/assets/images/cokedex.jpg',
       stack: ['Flutter', 'Laravel'],
       github: 'https://github.com/yourusername/project2',
     },
@@ -32,14 +32,30 @@ export const projects = [
     {
       name: 'MyBuilder',
       description: 'MyBuilder is a web application built with a PHP frontend and a MySQL backend. This platform is designed for people who have difficulty finding craftsmen, allowing them to order services online. In this project, I collaborated with a team of 3 members, including myself, with the role of team leader',
-      image: '/placeholder.svg?height=300&width=400',
+      image: '/assets/images/mybuilder.jpg',
       stack: ['PHP', 'MySql'],
       github: 'https://github.com/yourusername/project4',
     },
     {
+      "name": "re-u",
+      "description": "Re-u is a skincare website built using WordPress with the Elementor plugin and eCommerce features. Users can browse and purchase premium skincare products directly through the website. Developed for a client, I have received permission to showcase this project in my portfolio.",
+      "image": "/assets/images/re-u.jpeg",
+      "stack": ["WordPress", "SEO"],
+      "github": "https://github.com/yourusername/project5",
+      "live": "https://re-u.clarencespdf.site/"
+    },
+    {
+      "name": "moome",
+      "description": "Moome is a website for milk products built using WordPress, utilizing Elementor and eCommerce functionality. Users can purchase premium milk products online. This project was developed for a client, and I have received permission to feature it in my portfolio.",
+      "image": "/assets/images/moome.jpg",
+      "stack": ["WordPress", "SEO"],
+      "github": "https://github.com/yourusername/project5",
+      "live": ""
+    },
+    {
       name: 'apepe premium',
       description: 'apepe premium is a website built using WordPress, utilizing the Elementor plugin and eCommerce features. This simple eCommerce site allows users to order premium applications directly through the website.',
-      image: '/placeholder.svg?height=300&width=400',
+      image: '/assets/images/apepe.jpg',
       stack: ['WordPress', 'MySQL'],
       github: 'https://github.com/yourusername/project5',
       live: 'https://project5.com'
