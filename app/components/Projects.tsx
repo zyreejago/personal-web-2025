@@ -15,8 +15,7 @@ export default function Projects() {
   useEffect(() => {
     const updateMaxIndex = () => {
       if (containerRef.current) {
-        const containerWidth = containerRef.current.offsetWidth;
-        // cardWidth tidak digunakan, bisa dihapus
+        // Removed containerWidth since it's not being used
         const maxSlides = Math.floor(projects.length / 3);
         setMaxIndex(Math.max(0, maxSlides - 1));
       }

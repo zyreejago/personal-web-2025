@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react"; // Import useMemo
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -10,15 +10,18 @@ export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
 
-  // Define menuItems as a constant
-  const menuItems = [
-    "Home",
-    "About",
-    "Education",
-    "Experience",
-    "Projects",
-    "Certificates",
-  ];
+  // Memoize the menuItems array to avoid unnecessary re-renders
+  const menuItems = useMemo(
+    () => [
+      "Home",
+      "About",
+      "Education",
+      "Experience",
+      "Projects",
+      "Certificates",
+    ],
+    []
+  );
 
   useEffect(() => {
     const handleScroll = () => {
