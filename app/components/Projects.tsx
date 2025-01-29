@@ -16,8 +16,7 @@ export default function Projects() {
     const updateMaxIndex = () => {
       if (containerRef.current) {
         const containerWidth = containerRef.current.offsetWidth;
-        const cardWidth = containerWidth / 3; // Assuming 3 cards per view
-
+        // cardWidth tidak digunakan, bisa dihapus
         const maxSlides = Math.floor(projects.length / 3);
         setMaxIndex(Math.max(0, maxSlides - 1));
       }

@@ -10,6 +10,16 @@ export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
 
+  // Define menuItems as a constant
+  const menuItems = [
+    "Home",
+    "About",
+    "Education",
+    "Experience",
+    "Projects",
+    "Certificates",
+  ];
+
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
@@ -42,7 +52,7 @@ export default function Header() {
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, []); // This effect only runs on mount
 
   useEffect(() => {
     const handleHashChange = () => {
@@ -56,16 +66,7 @@ export default function Header() {
 
     window.addEventListener("hashchange", handleHashChange);
     return () => window.removeEventListener("hashchange", handleHashChange);
-  }, []);
-
-  const menuItems = [
-    "Home",
-    "About",
-    "Education",
-    "Experience",
-    "Projects",
-    "Certificates",
-  ];
+  }, [menuItems]); // Add menuItems as a dependency here
 
   return (
     <header
