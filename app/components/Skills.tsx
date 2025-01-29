@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState, useCallback } from "react";
 import { Icon } from "./Icon";
-import type { IconName } from "../types/icon";
+import type { IconName } from "./Icon";
 
 const skills: { name: string; description: string; icon: IconName }[] = [
   { name: "HTML", description: "Hypertext Markup Language", icon: "html5" },
