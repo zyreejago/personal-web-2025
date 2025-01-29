@@ -8,7 +8,6 @@ import {
   GraduationCap,
   Calendar,
   MapPin,
-  BookOpen,
   Code,
   Database,
   Network,
@@ -18,7 +17,6 @@ import {
   FlaskRoundIcon as Flask,
   Dna,
   Globe,
-  Cpu,
 } from "lucide-react";
 
 type Education = {
