@@ -17,7 +17,7 @@ export default function Projects() {
       if (containerRef.current) {
         const containerWidth = containerRef.current.offsetWidth;
         const cardWidth = containerWidth / 3; // Assuming 3 cards per view
-        const totalWidth = projects.length * cardWidth;
+
         const maxSlides = Math.floor(projects.length / 3);
         setMaxIndex(Math.max(0, maxSlides - 1));
       }
