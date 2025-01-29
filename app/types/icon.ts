@@ -1,5 +1,6 @@
-import type { SVGProps } from "react"
+import type { SVGProps } from "react";
 
+// Menggunakan named export untuk tipe IconName dan IconProps
 export type IconName =
   | "nextjs"
   | "html5"
@@ -11,9 +12,9 @@ export type IconName =
   | "firebase"
   | "python"
   | "flask"
-  | "docker"
+  | "docker";
 
+// Interface untuk IconProps
 export interface IconProps extends SVGProps<SVGSVGElement> {
-  name: IconName
+  name: IconName;
 }
-

@@ -1,4 +1,4 @@
-import type { IconProps } from "../types/icon"
+import type { IconProps } from "../types/icon";
 import {
   SiNextdotjs,
   SiHtml5,
@@ -11,8 +11,9 @@ import {
   SiPython,
   SiFlask,
   SiDocker,
-} from "react-icons/si"
+} from "react-icons/si";
 
+// Menyimpan ikon komponen dalam objek
 const iconComponents = {
   nextjs: SiNextdotjs,
   html5: SiHtml5,
@@ -25,8 +26,9 @@ const iconComponents = {
   python: SiPython,
   flask: SiFlask,
   docker: SiDocker,
-}
+};
 
+// Menyimpan warna masing-masing ikon dalam objek
 const iconColors = {
   nextjs: "#000000",
   html5: "#E34F26",
@@ -39,10 +41,12 @@ const iconColors = {
   python: "#3776AB",
   flask: "#000000",
   docker: "#2496ED",
-}
+};
 
+// Fungsi komponen Icon
 export function Icon({ name, ...props }: IconProps) {
-  const IconComponent = iconComponents[name]
+  const IconComponent = iconComponents[name]; // Mengambil komponen sesuai nama
+
   return IconComponent ? (
     <div className="relative group">
       <IconComponent
@@ -58,6 +62,5 @@ export function Icon({ name, ...props }: IconProps) {
         style={{ backgroundColor: iconColors[name] }}
       ></div>
     </div>
-  ) : null
+  ) : null;
 }
-
