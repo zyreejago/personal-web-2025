@@ -1,4 +1,6 @@
 import type { IconProps } from "../types/icon";
+import { SVGProps } from "react"; // Pastikan impor ini ada
+
 import {
   SiNextdotjs,
   SiHtml5,
@@ -13,8 +15,10 @@ import {
   SiDocker,
 } from "react-icons/si";
 
-// Menyimpan ikon komponen dalam objek
-const iconComponents = {
+const iconComponents: Record<
+  string,
+  React.ComponentType<SVGProps<SVGSVGElement>>
+> = {
   nextjs: SiNextdotjs,
   html5: SiHtml5,
   react: SiReact,
@@ -28,8 +32,7 @@ const iconComponents = {
   docker: SiDocker,
 };
 
-// Menyimpan warna masing-masing ikon dalam objek
-const iconColors = {
+const iconColors: Record<string, string> = {
   nextjs: "#000000",
   html5: "#E34F26",
   react: "#61DAFB",
@@ -43,10 +46,8 @@ const iconColors = {
   docker: "#2496ED",
 };
 
-// Fungsi komponen Icon
 export function Icon({ name, ...props }: IconProps) {
-  const IconComponent = iconComponents[name]; // Mengambil komponen sesuai nama
-
+  const IconComponent = iconComponents[name]; // Menggunakan name sebagai key
   return IconComponent ? (
     <div className="relative group">
       <IconComponent
