@@ -56,9 +56,14 @@ export default function Projects() {
 
       {/* Content */}
       <div className="container mx-auto px-4 relative z-10">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-12">
-          Projects
-        </h2>
+        <motion.h2
+          className="text-4xl md:text-5xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          Project
+        </motion.h2>
         <div className="relative overflow-hidden" ref={containerRef}>
           <motion.div
             className="flex items-stretch"

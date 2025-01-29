@@ -6,7 +6,7 @@ export const projects = [
     image: "/assets/images/detection-hoa.jpg",
     stack: ["Python", "Flask", "Scrapping Web"],
     github: "/assets/images/detection-hoa.jpg",
-    live: "https://project1.com",
+    live: "https://github.com/zyreejago",
   },
   {
     name: "Cokedex",
@@ -14,7 +14,7 @@ export const projects = [
       "Cokedex is a Flutter application developed with a Laravel backend. The application allows users to search for food recipes, post new recipes, and interact with an AI bot powered by Gemini, which is free and limited to providing information solely about food. In this project, I collaborated with a team of 5 members, including myself, to ensure the successful development and functionality of the application.",
     image: "/assets/images/cokedex.jpg",
     stack: ["Flutter", "Laravel"],
-    github: "https://github.com/yourusername/project2",
+    github: "https://github.com/8bitos/UAS-MOBILE/tree/main",
   },
   {
     name: "Web Split Bill",
@@ -30,8 +30,7 @@ export const projects = [
       "GoCheck is a web application similar to a simple to-do list where users can add or delete notes they have written. The website is built using ReactJS, ensuring a smooth and user-friendly experience.",
     image: "/assets/images/codepolitan.jpg",
     stack: ["ReactJS"],
-    github: "https://github.com/yourusername/project5",
-    live: "https://project5.com",
+    github: "https://github.com/zyreejago/project-codepolitan",
   },
   {
     name: "MyBuilder",
@@ -39,7 +38,7 @@ export const projects = [
       "MyBuilder is a web application built with a PHP frontend and a MySQL backend. This platform is designed for people who have difficulty finding craftsmen, allowing them to order services online. In this project, I collaborated with a team of 3 members, including myself, with the role of team leader",
     image: "/assets/images/mybuilder.jpg",
     stack: ["PHP", "MySql"],
-    github: "https://github.com/yourusername/project4",
+    github: "https://github.com/zyreejago/MyBuilder-project",
   },
   {
     name: "re-u",
@@ -47,7 +46,7 @@ export const projects = [
       "Re-u is a skincare website built using WordPress with the Elementor plugin and eCommerce features. Users can browse and purchase premium skincare products directly through the website. Developed for a client, I have received permission to showcase this project in my portfolio.",
     image: "/assets/images/re-u.jpeg",
     stack: ["WordPress", "SEO"],
-    github: "https://github.com/yourusername/project5",
+    github: "https://github.com/zyreejago",
     live: "https://re-u.clarencespdf.site/",
   },
   {
@@ -56,8 +55,7 @@ export const projects = [
       "Moome is a website for milk products built using WordPress, utilizing Elementor and eCommerce functionality. Users can purchase premium milk products online. This project was developed for a client, and I have received permission to feature it in my portfolio.",
     image: "/assets/images/moome.jpg",
     stack: ["WordPress", "SEO"],
-    github: "https://github.com/yourusername/project5",
-    live: "",
+    github: "https://github.com/zyreejago",
   },
   {
     name: "apepe premium",
@@ -65,8 +63,7 @@ export const projects = [
       "apepe premium is a website built using WordPress, utilizing the Elementor plugin and eCommerce features. This simple eCommerce site allows users to order premium applications directly through the website.",
     image: "/assets/images/apepe.jpg",
     stack: ["WordPress", "MySQL"],
-    github: "https://github.com/yourusername/project5",
-    live: "https://project5.com",
+    github: "https://github.com/zyreejago/dummy-wordpress",
   },
   {
     name: "Project from CODEPOLITAN",
@@ -74,7 +71,7 @@ export const projects = [
       "The project involves creating a simple blog application with pages for Home, Articles, and Blog. The articles are fetched from JSONPlaceholder API, and the frontend is developed using ReactJS.",
     image: "/assets/images/codepolitan.jpg",
     stack: ["React.JS"],
-    github: "https://github.com/yourusername/project3",
+    github: "https://github.com/zyreejago/fundamental-React",
   },
   {
     name: "Project from CODEPOLITAN",
@@ -82,7 +79,7 @@ export const projects = [
       "Project from Codepolitan involves creating a website that fetches data from TVMaze API. The website will display popular TV shows or movies, providing users with a simple and interactive platform to explore content.",
     image: "/assets/images/codepolitan.jpg",
     stack: ["JavaScript"],
-    github: "https://github.com/yourusername/project5",
+    github: "https://github.com/zyreejago/AJAX-and-API",
   },
   {
     name: "Project from CODEPOLITAN",
@@ -90,7 +87,7 @@ export const projects = [
       "Project from Codepolitan involves creating a website that fetches jokes using the Jokes Retrieval API. When users click a button on the website, a random joke is displayed, providing a fun and interactive experience.",
     image: "/assets/images/codepolitan.jpg",
     stack: ["JavaScript"],
-    github: "https://github.com/yourusername/project5",
+    github: "https://github.com/zyreejago/AJAX-and-API",
   },
   {
     name: "Project from Clients",
@@ -98,6 +95,6 @@ export const projects = [
       "Project from clients involves creating custom web or mobile solutions tailored to the specific needs and requirements of each client. Due to confidentiality agreements, I am unable to provide specific details about these projects to maintain client privacy.",
     image: "/assets/images/client.jpg",
     stack: ["Laravel", "Flutter", "ReactJS", "WordPress"],
-    github: "https://github.com/yourusername/project5",
+    github: "https://github.com/zyreejago",
   },
 ];

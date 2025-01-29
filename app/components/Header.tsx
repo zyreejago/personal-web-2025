@@ -79,7 +79,7 @@ export default function Header() {
             <Link
               key={item}
               href={item.toLowerCase() === "" ? "#" : `#${item.toLowerCase()}`}
-              className={`relative text-white hover:text-purple-400 transition duration-300 py-2 px-1 group ${
+              className={`relative inline-block text-white hover:text-purple-400 transition duration-300 py-2 px-1 group ${
                 activeSection === item.toLowerCase() ? "text-purple-400" : ""
               }`}
               onClick={() => {
@@ -89,13 +89,16 @@ export default function Header() {
               }}
             >
               {item}
-              <motion.div
-                className="absolute bottom-0 left-0 w-full h-0.5 bg-purple-400"
+              <motion.span
+                className="absolute bottom-0 left-0 h-0.5 bg-purple-400"
                 initial={false}
                 animate={{
                   width: activeSection === item.toLowerCase() ? "100%" : "0%",
                 }}
                 transition={{ duration: 0.3, ease: "easeInOut" }}
+                style={{
+                  width: activeSection === item.toLowerCase() ? "auto" : "0", // Adjust width to text size
+                }}
               />
               <motion.div
                 className="absolute bottom-0 left-0 w-full h-0.5 bg-purple-400 opacity-0"
@@ -135,7 +138,7 @@ export default function Header() {
                       ? "#"
                       : `#${item.toLowerCase()}`
                   }
-                  className={`relative text-white hover:text-purple-400 transition duration-300 py-2 ${
+                  className={`relative inline-block text-white hover:text-purple-400 transition duration-300 py-2 ${
                     activeSection === item.toLowerCase()
                       ? "text-purple-400"
                       : ""
@@ -146,14 +149,18 @@ export default function Header() {
                   }}
                 >
                   {item}
-                  <motion.div
-                    className="absolute bottom-0 left-0 w-full h-0.5 bg-purple-400"
+                  <motion.span
+                    className="absolute bottom-0 left-0 h-0.5 bg-purple-400"
                     initial={false}
                     animate={{
                       width:
                         activeSection === item.toLowerCase() ? "100%" : "0%",
                     }}
                     transition={{ duration: 0.3, ease: "easeInOut" }}
+                    style={{
+                      width:
+                        activeSection === item.toLowerCase() ? "auto" : "0", // Adjust width to text size
+                    }}
                   />
                 </Link>
               ))}

@@ -6,15 +6,35 @@ import type { IconName } from "../types/icon";
 
 const skills: { name: string; description: string; icon: IconName }[] = [
   { name: "HTML", description: "Hypertext Markup Language", icon: "html5" },
-  { name: "Next.js", description: "React framework for production", icon: "nextjs" },
+  {
+    name: "Next.js",
+    description: "React framework for production",
+    icon: "nextjs",
+  },
   { name: "React", description: "Library for building UIs", icon: "react" },
-  { name: "Tailwind CSS", description: "Utility-first CSS framework", icon: "tailwind" },
-  { name: "Laravel", description: "PHP framework for development", icon: "laravel" },
-  { name: "Flutter", description: "Programming Mobile language", icon: "flutter" },
+  {
+    name: "Tailwind CSS",
+    description: "Utility-first CSS framework",
+    icon: "tailwind",
+  },
+  {
+    name: "Laravel",
+    description: "PHP framework for development",
+    icon: "laravel",
+  },
+  {
+    name: "Flutter",
+    description: "Programming Mobile language",
+    icon: "flutter",
+  },
   { name: "Dart", description: "Language for Flutter", icon: "dart" },
   { name: "Firebase", description: "Backend as a service", icon: "firebase" },
   { name: "Python", description: "Programming language", icon: "python" },
-  { name: "Flask", description: "Micro web framework for Python", icon: "flask" },
+  {
+    name: "Flask",
+    description: "Micro web framework for Python",
+    icon: "flask",
+  },
   { name: "Docker", description: "Container platform", icon: "docker" },
 ];
 
@@ -29,10 +49,13 @@ export default function Skills() {
   useEffect(() => {
     const marquee = marqueeRef.current;
     if (marquee) {
-      const animation = marquee.animate([{ transform: "translateX(0%)" }, { transform: "translateX(-50%)" }], {
-        duration: 10000,
-        iterations: Number.POSITIVE_INFINITY,
-      });
+      const animation = marquee.animate(
+        [{ transform: "translateX(0%)" }, { transform: "translateX(-100%)" }],
+        {
+          duration: 30000, // Durasi panjang untuk smooth
+          iterations: Number.POSITIVE_INFINITY,
+        }
+      );
       return () => animation.cancel();
     }
   }, []);
@@ -62,8 +85,16 @@ export default function Skills() {
           Skills & Technologies
         </h2>
         <div className="overflow-hidden">
-          <div ref={marqueeRef} className="flex">
-            {[...skills, ...skills].map((skill, index) => (
+          <div
+            ref={marqueeRef}
+            className="flex"
+            style={{
+              display: "flex",
+              whiteSpace: "nowrap",
+              animation: "marquee 30s linear infinite",
+            }}
+          >
+            {[...skills, ...skills, ...skills].map((skill, index) => (
               <div key={index} className="flex-shrink-0 w-64 mx-4">
                 <div className="h-full flex flex-col items-center justify-center p-6 bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl shadow-lg border border-gray-700">
                   <Icon name={skill.icon} className="w-16 h-16 mb-4" />
@@ -74,6 +105,25 @@ export default function Skills() {
           </div>
         </div>
       </div>
+
+      {/* Add the CSS for smooth marquee animation */}
+      <style jsx>{`
+        @keyframes marquee {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-100%);
+          }
+        }
+
+        /* For smaller devices, increase the duration for smoother animation */
+        @media (max-width: 768px) {
+          .flex {
+            animation-duration: 45s; /* Increase animation duration for mobile */
+          }
+        }
+      `}</style>
     </section>
   );
 }

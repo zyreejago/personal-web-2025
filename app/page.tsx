@@ -1,16 +1,18 @@
 "use client";
 
-import dynamic from 'next/dynamic'
-import Header from './components/Header'
-import Home from './components/Home'
-import About from './components/About'
-import Skills from './components/Skills'
-import Projects from './components/Projects'
-import Certificates from './components/Certificates'
-import Contact from './components/Contact'
-import Education from './components/Education';
+import dynamic from "next/dynamic";
+import Header from "./components/Header";
+import Home from "./components/Home";
+import About from "./components/About";
+import Skills from "./components/Skills";
+import Projects from "./components/Projects";
+import Certificates from "./components/Certificates";
+import Contact from "./components/Contact";
+import Education from "./components/Education";
 
-const WorkExperience = dynamic(() => import('./components/WorkExperience'), { ssr: false })
+const WorkExperience = dynamic(() => import("./components/WorkExperience"), {
+  ssr: false,
+});
 
 export default function Page() {
   return (
@@ -19,7 +21,7 @@ export default function Page() {
       <main>
         <Home />
         <About />
-        <Education/>
+        <Education />
         <Skills />
         <WorkExperience />
         <Projects />
@@ -27,6 +29,5 @@ export default function Page() {
         <Contact />
       </main>
     </div>
-  )
+  );
 }
-

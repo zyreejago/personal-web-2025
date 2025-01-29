@@ -1,19 +1,36 @@
-'use client'
+"use client";
 
-import { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
-import { ChevronDown, ChevronUp, GraduationCap, Calendar, MapPin, BookOpen, Code, Database, Network, Brain, Smartphone, Calculator, FlaskRoundIcon as Flask, Dna, Globe, Cpu } from 'lucide-react'
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import {
+  ChevronDown,
+  ChevronUp,
+  GraduationCap,
+  Calendar,
+  MapPin,
+  BookOpen,
+  Code,
+  Database,
+  Network,
+  Brain,
+  Smartphone,
+  Calculator,
+  FlaskRoundIcon as Flask,
+  Dna,
+  Globe,
+  Cpu,
+} from "lucide-react";
 
 type Education = {
-  level: string
-  institution: string
-  location: string
-  period: string
-  description: string
-  subjects?: { name: string; icon: React.ElementType }[]
-  ongoing?: boolean
-  progress?: number
-}
+  level: string;
+  institution: string;
+  location: string;
+  period: string;
+  description: string;
+  subjects?: { name: string; icon: React.ElementType }[];
+  ongoing?: boolean;
+  progress?: number;
+};
 
 const educationData: Education[] = [
   {
@@ -21,58 +38,62 @@ const educationData: Education[] = [
     institution: "Universitas Pendidikan Ganesha",
     location: "Singaraja, Indonesia",
     period: "2022 - Present",
-    description: "In college, I have been learning a lot about programming, which sparked my interest in diving deeper into this field. As a result, I have been studying web and mobile development, which has led me to work as a freelancer, as I am doing now.",
+    description:
+      "In college, I have been learning a lot about programming, which sparked my interest in diving deeper into this field. As a result, I have been studying web and mobile development, which has led me to work as a freelancer, as I am doing now.",
     subjects: [
       { name: "Algoritma dan Struktur Data", icon: Code },
       { name: "Pemrograman Berorientasi Objek", icon: Code },
       { name: "Basis Data", icon: Database },
       { name: "Jaringan Komputer", icon: Network },
       { name: "Kecerdasan Buatan", icon: Brain },
-      { name: "Pengembangan Aplikasi Web dan Mobile", icon: Smartphone }
+      { name: "Pengembangan Aplikasi Web dan Mobile", icon: Smartphone },
     ],
     ongoing: true,
-    progress: 75
+    progress: 75,
   },
   {
     level: "Senior High School",
     institution: "MAN 3 Jembrana",
     location: "Jembrana, Indonesia",
     period: "2019 - 2022",
-    description: "In high school, I achieved first place in a national online Mathematics Olympiad, third place in the most prestigious district-level Mathematics Olympiad event, and third place in a math competition among Islamic schools in the district.",
+    description:
+      "In high school, I achieved first place in a national online Mathematics Olympiad, third place in the most prestigious district-level Mathematics Olympiad event, and third place in a math competition among Islamic schools in the district.",
     subjects: [
       { name: "Matematika", icon: Calculator },
       { name: "Fisika", icon: Flask },
       { name: "Kimia", icon: Flask },
       { name: "Biologi", icon: Dna },
       { name: "Bahasa Inggris", icon: Globe },
-       
-    ]
+    ],
   },
   {
     level: "Junior High School",
     institution: "MTS Ma'arif",
     location: "Karangasem, Indonesia",
     period: "2016 - 2019",
-    description: "In junior high school, I won second place in the district Mathematics Olympiad and the training program, earning the chance to compete at the provincial level. Although I didn't win provincially, it was a valuable experience.",
+    description:
+      "In junior high school, I won second place in the district Mathematics Olympiad and the training program, earning the chance to compete at the provincial level. Although I didn't win provincially, it was a valuable experience.",
     subjects: [
       { name: "Matematika", icon: Calculator },
       { name: "IPA", icon: Flask },
       { name: "Bahasa Indonesia", icon: Globe },
       { name: "Bahasa Inggris", icon: Globe },
-    
-    ]
-  }
-]
+    ],
+  },
+];
 
 export default function Education() {
-  const [expandedIndex, setExpandedIndex] = useState<number | null>(null)
+  const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
 
   const toggleExpand = (index: number) => {
-    setExpandedIndex(prevIndex => prevIndex === index ? null : index)
-  }
+    setExpandedIndex((prevIndex) => (prevIndex === index ? null : index));
+  };
 
   return (
-    <section id="education" className="py-20 bg-gray-950 text-white relative overflow-hidden">
+    <section
+      id="education"
+      className="py-20 bg-gray-950 text-white relative overflow-hidden"
+    >
       {/* Background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="stars"></div>
@@ -81,7 +102,7 @@ export default function Education() {
 
       {/* Content */}
       <div className="container mx-auto px-4 relative z-10">
-        <motion.h2 
+        <motion.h2
           className="text-4xl md:text-5xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -99,18 +120,24 @@ export default function Education() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.2 }}
             >
-              <div 
+              <div
                 className="p-6 cursor-pointer"
                 onClick={() => toggleExpand(index)}
               >
                 <div className="flex justify-between items-center">
-                  <h3 className="text-xl font-semibold text-white bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">{edu.level}</h3>
+                  <h3 className="text-xl font-semibold text-white bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
+                    {edu.level}
+                  </h3>
                   <motion.div
                     animate={{ rotate: expandedIndex === index ? 180 : 0 }}
                     transition={{ duration: 0.3 }}
                     className="text-purple-400"
                   >
-                    {expandedIndex === index ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
+                    {expandedIndex === index ? (
+                      <ChevronUp size={20} />
+                    ) : (
+                      <ChevronDown size={20} />
+                    )}
                   </motion.div>
                 </div>
                 <div className="mt-2 flex items-center text-gray-300 text-sm">
@@ -127,10 +154,12 @@ export default function Education() {
                 </div>
                 {edu.ongoing && (
                   <div className="mt-3">
-                    <div className="text-xs font-medium text-gray-400 mb-1">Progress</div>
+                    <div className="text-xs font-medium text-gray-400 mb-1">
+                      Progress
+                    </div>
                     <div className="w-full bg-gray-700 rounded-full h-2">
-                      <div 
-                        className="bg-gradient-to-r from-blue-500 to-purple-600 h-2 rounded-full" 
+                      <div
+                        className="bg-gradient-to-r from-blue-500 to-purple-600 h-2 rounded-full"
                         style={{ width: `${edu.progress}%` }}
                       ></div>
                     </div>
@@ -142,14 +171,18 @@ export default function Education() {
                 {expandedIndex === index && (
                   <motion.div
                     initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: 'auto' }}
+                    animate={{ opacity: 1, height: "auto" }}
                     exit={{ opacity: 0, height: 0 }}
                     transition={{ duration: 0.3 }}
                   >
                     <div className="px-6 pb-6">
-                      <p className="text-gray-300 text-sm mb-4">{edu.description}</p>
+                      <p className="text-gray-300 text-sm mb-4">
+                        {edu.description}
+                      </p>
                       <h4 className="font-semibold text-base text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600 mb-2">
-                        {edu.ongoing ? "Currently Learning:" : "Already Learned:"}
+                        {edu.ongoing
+                          ? "Currently Learning:"
+                          : "Already Learned:"}
                       </h4>
                       <div className="grid grid-cols-1 gap-2">
                         {edu.subjects?.map((subject, i) => (
@@ -160,7 +193,10 @@ export default function Education() {
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ delay: i * 0.1 }}
                           >
-                            <subject.icon size={16} className="mr-2 text-purple-400 flex-shrink-0" />
+                            <subject.icon
+                              size={16}
+                              className="mr-2 text-purple-400 flex-shrink-0"
+                            />
                             <span className="text-xs">{subject.name}</span>
                           </motion.div>
                         ))}
@@ -174,6 +210,5 @@ export default function Education() {
         </div>
       </div>
     </section>
-  )
+  );
 }
-

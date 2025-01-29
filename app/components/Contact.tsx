@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -45,16 +46,14 @@ export default function Contact() {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <h2
-          className="text-3xl md:text-4xl font-bold text-center mb-8 animate-pulse-slow"
-          style={{
-            backgroundImage: "linear-gradient(to right, #f9d423, #ff4e50)",
-            backgroundClip: "text",
-            color: "transparent",
-          }}
+        <motion.h2
+          className="text-4xl md:text-5xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
         >
           Contact Me
-        </h2>
+        </motion.h2>
         <form onSubmit={handleSubmit} className="max-w-lg mx-auto">
           <div className="mb-4">
             <label
