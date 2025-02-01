@@ -106,7 +106,7 @@ export default function Skills() {
         </div>
       </div>
 
-      {/* Add the CSS for smooth marquee animation */}
+      {/* Add the CSS for smooth marquee ] */}
       <style jsx>{`
         @keyframes marquee {
           0% {
