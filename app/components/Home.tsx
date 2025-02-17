@@ -80,7 +80,7 @@ export default function Home() {
           </motion.a>
 
           <motion.a
-            href="#contact"
+            href="mail"
             className="border-2 border-purple-400 text-purple-400 px-6 py-3 rounded-full font-bold flex items-center space-x-2 transition-all hover:scale-105"
             whileHover={{
               scale: 1.05,

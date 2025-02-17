@@ -10,6 +10,9 @@ import Certificates from "./components/Certificates";
 import Contact from "./components/Contact";
 import Education from "./components/Education";
 import  {HeroParallax}  from "@/components/ui/hero-parallax";
+import TextPressure from './TextPressure/TextPressure';
+
+
 
 const WorkExperience = dynamic(() => import("./components/WorkExperience"), {
   ssr: false,
@@ -30,12 +33,9 @@ export default function Page() {
   products={[
     { title: "Detection Hoax Using Web Semantic", link: "https://github.com/zyreejago", thumbnail: "/assets/images/detection-hoa.jpg" },
     { title: "Cokedex", link: "https://github.com/8bitos/UAS-MOBILE/tree/main", thumbnail: "/assets/images/cokedex.jpg" },
-  
-    
     { title: "MyBuilder", link: "https://github.com/zyreejago/MyBuilder-project", thumbnail: "/assets/images/mybuilder.jpg" },
     { title: "re-u", link: "https://re-u.clarencespdf.site/", thumbnail: "/assets/images/re-u.jpeg" },
     { title: "moome", link: "https://github.com/zyreejago", thumbnail: "/assets/images/moome.jpg" },
-   
     { title: "MyBuilder", link: "https://github.com/zyreejago/MyBuilder-project", thumbnail: "/assets/images/mybuilder.jpg" },
     { title: "re-u", link: "https://re-u.clarencespdf.site/", thumbnail: "/assets/images/re-u.jpeg" },
     { title: "moome", link: "https://github.com/zyreejago", thumbnail: "/assets/images/moome.jpg" },
@@ -46,7 +46,20 @@ export default function Page() {
   ]}
 />
         <Certificates />
-        <Contact />
+        <TextPressure
+    text="Thank you!"
+    flex={true}
+    alpha={false}
+    stroke={false}
+    width={true}
+    weight={true}
+    italic={true}
+    textColor="#ffffff"
+    strokeColor="#ff0000"
+    minFontSize={36}
+  />
+        
+
 
 
       </main>

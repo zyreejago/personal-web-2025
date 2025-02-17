@@ -16,6 +16,19 @@ const nextConfig: NextConfig = {
       ],
     });
 
+    // Menambahkan rule untuk memproses file .glb
+    config.module.rules.push({
+      test: /\.glb$/i,
+      use: [
+        {
+          loader: 'file-loader',
+          options: {
+            name: '[path][name].[hash:8].[ext]',
+          },
+        },
+      ],
+    });
+
     return config;
   },
 };
