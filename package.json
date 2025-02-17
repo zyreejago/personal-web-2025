@@ -10,17 +10,23 @@
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.1.1",
+    "@react-three/drei": "^9.121.5",
+    "@react-three/fiber": "^8.17.14",
+    "@react-three/rapier": "^1.5.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "framer-motion": "^11.17.0",
     "lucide-react": "^0.471.2",
+    "meshline": "^3.3.1",
+    "motion": "^12.4.3",
     "next": "15.1.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-fast-marquee": "^1.6.5",
     "react-icons": "^5.4.0",
     "tailwind-merge": "^2.6.0",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "three": "^0.167.1"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
@@ -29,6 +35,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.1.4",
+    "file-loader": "^6.2.0",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"

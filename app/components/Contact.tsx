@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
+
+
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: "",
@@ -35,10 +37,12 @@ export default function Contact() {
   }
 
   return (
+    
     <section
       id="contact"
       className="py-20 bg-gray-950 text-white relative overflow-hidden"
     >
+      
       {/* Background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="stars"></div>
