@@ -71,7 +71,7 @@ export default function Certificates() {
   return (
     <section
       id="certificates"
-      className="py-16 bg-gray-950 text-white relative overflow-hidden"
+      className="py-16 bg-gray-950 text-white relative overflow-hidden pb-30"
     >
       {/* Background elements */}
       <div className="absolute inset-0 overflow-hidden">

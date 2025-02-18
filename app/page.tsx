@@ -11,6 +11,11 @@ import Contact from "./components/Contact";
 import Education from "./components/Education";
 import  {HeroParallax}  from "@/components/ui/hero-parallax";
 import TextPressure from './TextPressure/TextPressure';
+import { AnimatedBeamDemo } from "./components/AnimatedBeamDemo";
+import { ScrollBasedVelocityDemo } from "./components/ScrollBasedVelocityDemo";
+import { IconCloudDemo } from "./components/IconCloudDemo";
+import { AnimatedBeamMultipleOutputDemo } from "./components/AnimatedBeam";
+
 
 
 
@@ -26,7 +31,10 @@ export default function Page() {
         <Home />
         <About />
         <Education />
-        <Skills />
+        {/* <Skills /> */}
+        <ScrollBasedVelocityDemo/>
+        <IconCloudDemo/>
+        <AnimatedBeamDemo/>
         <WorkExperience />
         <Projects />
         <HeroParallax
@@ -46,6 +54,8 @@ export default function Page() {
   ]}
 />
         <Certificates />
+        <Contact/>
+        <AnimatedBeamMultipleOutputDemo/>
         <TextPressure
     text="Thank you!"
     flex={true}
