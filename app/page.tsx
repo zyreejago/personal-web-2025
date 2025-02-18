@@ -30,7 +30,7 @@ export default function Page() {
         <Home />
         <About />
         <Education />
-        {/* <Skills /> */}
+        
         <ScrollBasedVelocityDemo/>
         
         <AnimatedBeamDemo/>
