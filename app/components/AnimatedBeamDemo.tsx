@@ -60,9 +60,14 @@ export function AnimatedBeamDemo() {
           <Circle ref={div4Ref}>
             <Icons.flutter />
           </Circle>
-          <Circle ref={div5Ref} className="size-20">
-            <Icons.skills />
-          </Circle>
+          <div 
+    ref={div5Ref} 
+    className="rounded-2xl border border-slate-700 bg-zinc-200 dark:bg-zinc-800 z-10 flex items-center justify-center w-48 h-24 px-6 py-4"
+  >
+    <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-zinc-300 bg-clip-text text-center text-4xl font-semibold leading-none text-transparent dark:from-white dark:to-black sm:text-6xl">
+      Skills
+    </span>
+  </div>
           <Circle ref={div6Ref}>
             <Icons.firebase />
           </Circle>

@@ -3,6 +3,8 @@
 import { useEffect, useState, useCallback } from "react";
 import { useTypingEffect } from "../hooks/useTypingEffect";
 import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button"
+import { RainbowButton } from "@/components/magicui/rainbow-button";
 
 export default function Home() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -56,53 +58,23 @@ export default function Home() {
 
         {/* Buttons */}
         <div className="flex flex-wrap justify-center gap-4">
-          <motion.a
-            href="https://drive.google.com/drive/folders/1-8TnRTeEY9rfk-rrIRI5xESWUiboqIHT"
-            download
-            className="bg-gradient-to-r from-blue-400 to-teal-400 text-gray-900 px-6 py-3 rounded-full font-bold shadow-neon-blue hover:shadow-neon-blue-intense flex items-center space-x-2 transition-all hover:scale-105"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <span>Download CV</span>
-            <svg
-              className="w-5 h-5"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
-              />
-            </svg>
-          </motion.a>
+        <a href="https://drive.google.com/drive/folders/1-8TnRTeEY9rfk-rrIRI5xESWUiboqIHT" target="_blank" rel="noopener noreferrer">
+  <RainbowButton className="shadow-2xl py-6">
+    <span className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg font-inter">
+      Download CV
+    </span>
+  </RainbowButton>
+</a>
 
-          <motion.a
-            href="mail"
-            className="border-2 border-purple-400 text-purple-400 px-6 py-3 rounded-full font-bold flex items-center space-x-2 transition-all hover:scale-105"
-            whileHover={{
-              scale: 1.05,
-              backgroundColor: "rgba(167, 139, 250, 0.1)",
-            }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <span>Get in Touch</span>
-            <svg
-              className="w-5 h-5 ml-2"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M14 5l7 7m0 0l-7 7m7-7H3"
-              />
-            </svg>
-          </motion.a>
+
+<a href="mailto:rezzynezz1@gmail.com" target="_blank" rel="noopener noreferrer">
+  <RainbowButton className="shadow-2xl py-6">
+    <span className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg font-inter">
+      Contact Me
+    </span>
+  </RainbowButton>
+</a>
+
         </div>
       </div>
 

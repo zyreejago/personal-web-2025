@@ -18,7 +18,7 @@ export const Icons = {
     ),
     skills: () => (
       <svg width="80" height="80" viewBox="0 0 200 50" xmlns="http://www.w3.org/2000/svg">
-        <text x="8" y="55" fontFamily="Arial, sans-serif" fontSize="60" fontWeight="bold" fill="#4A5568">
+        <text x="-5" y="55" fontFamily="Poppins" fontSize="80" fontWeight="bold" fill="#4A5568">
           Skills
         </text>
       </svg>

@@ -1,7 +1,8 @@
 import './globals.css'
-import { Inter } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+import { Poppins } from 'next/font/google';
+
+const poppins = Poppins({ subsets: ['latin'], weight: ['400', '500', '600'] });
 
 export const metadata = {
   title: 'RezzyPortfolio',
@@ -18,7 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={inter.className}>{children}</body>
+      <body className={poppins.className}>{children}</body>
     </html>
   )
 }
