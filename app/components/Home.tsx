@@ -3,7 +3,6 @@
 import { useEffect, useState, useCallback } from "react";
 import { useTypingEffect } from "../hooks/useTypingEffect";
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button"
 import { RainbowButton } from "@/components/magicui/rainbow-button";
 
 export default function Home() {
