@@ -149,7 +149,7 @@ export const ProductCard = ({
       whileHover={{
         y: -20,
       }}
-      key={product.title}
+      key={`${product.title}-${product.link}-${product.thumbnail}`}
       className="group/product h-96 w-[30rem] relative flex-shrink-0"
     >
       <Link
@@ -171,3 +171,4 @@ export const ProductCard = ({
     </motion.div>
   );
 };
+

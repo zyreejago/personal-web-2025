@@ -1,5 +1,28 @@
 export const projects = [
   {
+    name: "Web Development Services",
+    description:
+      "At Zeecreate, we specialize in providing professional and custom website development services to help businesses establish a strong online presence. Whether you’re looking to create a new website or redesign your existing one, our team of skilled developers and designers are here to bring your vision to life.",
+    image: "/assets/images/zeecreate.png",
+    stack: ["NextJS", "Tailwind CSS"],
+    github: "/assets/images/donasijpg",
+    live: "http://zeecreate.my.id",
+  },{
+    name: "Web UMKM Bakery",
+    description:
+      "This project involved the development of a custom website for a local bakery, designed to streamline the customer experience with a pre-order system. The website allows customers to easily browse through a selection of freshly baked goods, customize their orders, and select their preferred pickup or delivery time.",
+    image: "/assets/images/bakery.png",
+    stack: ["NextJs" , "Supabase"],
+    github: "https://github.com/zyreejago",
+
+  },{
+    name: "Online Donation Website", 
+    description:
+      "This project involved the development of an online donation platform for a non-profit foundation, aimed at making the donation process simple and secure. The website allows users to make contributions towards various causes supported by the foundation, offering a transparent and efficient way to give back to the community.",
+    image: "/assets/images/donasi.png",
+    stack: ["Laravel", 'Tailwind CSS',"MySql"],
+    github: "https://github.com/zyreejago",
+  },{
     name: "Detection Hoax Using Web Semantic",
     description:
       "Detection Hoax Using Web Semantic is a project developed using Python for web scraping from detik.com and CNN Indonesia. The backend is built using GraphDB to manage and analyze data. In this project, I collaborated with a team of 3 members, including myself, to ensure the successful implementation and functionality of the system.",

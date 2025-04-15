@@ -38,16 +38,23 @@ export default function Page() {
         <Projects />
         <HeroParallax
   products={[
+    { title: "Web Development Services", link: "http://zeecreate.my.id", thumbnail: "/assets/images/zeecreate.png" },
+    { title: "Web UMKM Bakery", link: "https://github.com/zyreejago", thumbnail: "/assets/images/donasi.png" },
+    { title: "Online Donation Website", link: "https://github.com/zyreejago", thumbnail: "/assets/images/bakery.png" },
+
     { title: "Detection Hoax Using Web Semantic", link: "https://github.com/zyreejago", thumbnail: "/assets/images/detection-hoa.jpg" },
     { title: "Cokedex", link: "https://github.com/8bitos/UAS-MOBILE/tree/main", thumbnail: "/assets/images/cokedex.jpg" },
     { title: "MyBuilder", link: "https://github.com/zyreejago/MyBuilder-project", thumbnail: "/assets/images/mybuilder.jpg" },
     { title: "re-u", link: "https://re-u.clarencespdf.site/", thumbnail: "/assets/images/re-u.jpeg" },
-    { title: "moome", link: "https://github.com/zyreejago", thumbnail: "/assets/images/moome.jpg" },
-    { title: "MyBuilder", link: "https://github.com/zyreejago/MyBuilder-project", thumbnail: "/assets/images/mybuilder.jpg" },
-    { title: "re-u", link: "https://re-u.clarencespdf.site/", thumbnail: "/assets/images/re-u.jpeg" },
+    { title: "moomee", link: "https://github.com/zyreejago", thumbnail: "/assets/images/moome.jpg" },
+    { title: "re-ui", link: "https://re-u.clarencespdf.site/", thumbnail: "/assets/images/re-u.jpeg" },
     { title: "moome", link: "https://github.com/zyreejago", thumbnail: "/assets/images/moome.jpg" },
     { title: "apepe premium", link: "https://github.com/zyreejago/dummy-wordpress", thumbnail: "/assets/images/apepe.jpg" },
 
+
+    { title: "Web Development Services", link: "http://zeecreate.my.id", thumbnail: "/assets/images/zeecreate.png" },
+    { title: "Web UMKM Bakery", link: "https://github.com/zyreejago", thumbnail: "/assets/images/donasi.png" },
+    { title: "Online Donation Website", link: "https://github.com/zyreejago", thumbnail: "/assets/images/bakery.png" },
 
 
   ]}
